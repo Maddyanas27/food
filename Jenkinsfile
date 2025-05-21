@@ -5,7 +5,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("sanmathisedhupathi/recipenest:latest")
+                    docker.build("maddyanas/recipenest:latest")
                 }
             }
         }
@@ -13,8 +13,8 @@ pipeline {
             steps {
                 script {
                     sh """
-                    docker login -u sanmathisedhupathi -p 08-Sep-2004
-                    docker push sanmathisedhupathi/recipenest:latest
+                    docker login -u maddyanas -p 28-Jul-2004
+                    docker push maddyanas/recipenest:latest
                     """
                 }
             }
